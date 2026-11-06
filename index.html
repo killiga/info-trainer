@@ -10,10 +10,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <script>try{var t=localStorage.getItem('ih_pref_theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <style>
-/* Умный помощник по информатике
-   Идея: тёмно-бирюзовая «лаборатория» с живой картой знаний в центре внимания.
-   Бирюзовый цвет означает знание, янтарный означает освоенную тему.
-   Шрифты: Unbounded для заголовков и цифр, Onest для текста, JetBrains Mono только для кода. */
 
 :root {
   --font-head: 'Unbounded', 'Onest', system-ui, sans-serif;
@@ -84,7 +80,6 @@ h3 { font-size: 1.15rem; line-height: 1.3; }
 .muted { color: var(--mut); }
 .num { font-variant-numeric: tabular-nums; }
 
-/* ---------- кнопки и мелкие элементы ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   border: 0; border-radius: 999px; padding: 13px 24px; cursor: pointer; text-decoration: none;
@@ -107,7 +102,6 @@ h3 { font-size: 1.15rem; line-height: 1.3; }
 .bar { height: 10px; border-radius: 999px; background: var(--surface2); border: 1px solid var(--line); overflow: hidden; }
 .bar > i { display: block; height: 100%; background: var(--acc); border-radius: inherit; transition: width .7s cubic-bezier(.2, .8, .2, 1); }
 
-/* ---------- шапка ---------- */
 .site-header {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30;
   background: var(--header-bg); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
@@ -126,7 +120,6 @@ h3 { font-size: 1.15rem; line-height: 1.3; }
 .icon-btn:hover { border-color: var(--acc); }
 .icon-btn svg { width: 20px; height: 20px; }
 
-/* ---------- главная ---------- */
 .hero {
   position: relative; overflow: hidden; border-bottom: 1px solid var(--line);
   background:
@@ -151,7 +144,6 @@ h3 { font-size: 1.15rem; line-height: 1.3; }
 .viz-live .tally { margin-left: auto; font-family: var(--font-head); font-weight: 600; white-space: nowrap; font-size: .95rem; }
 @keyframes blink { 50% { opacity: .25; } }
 
-/* ---------- как это работает ---------- */
 .section { padding-block: 84px; }
 .section.alt { background: var(--bg2); border-block: 1px solid var(--line); }
 .sec-head { max-width: 46em; margin-bottom: 40px; }
@@ -168,7 +160,6 @@ h3 { font-size: 1.15rem; line-height: 1.3; }
 .step.on { border-color: var(--acc); box-shadow: var(--shadow); transform: translateY(-4px); }
 .step.on::before { background: var(--acc); color: var(--acc-ink); border-color: var(--acc); }
 
-/* ---------- приложение: вкладки ---------- */
 .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
 .tab {
   border: 1.5px solid var(--line2); background: var(--surface); border-radius: 999px; padding: 11px 22px; cursor: pointer; font-weight: 600; transition: all .2s;
@@ -176,7 +167,6 @@ h3 { font-size: 1.15rem; line-height: 1.3; }
 .tab:hover { border-color: var(--acc); }
 .tab[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
-/* тренажёр */
 .train-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(300px, 1fr); gap: 22px; align-items: start; }
 .train-main, .train-side { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
 .controls { padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; }
@@ -263,7 +253,6 @@ h3 { font-size: 1.15rem; line-height: 1.3; }
 .why summary { cursor: pointer; font-weight: 600; color: var(--ink); }
 .formula { margin-top: 10px; padding: 12px 14px; border-radius: 10px; background: var(--code-bg); font: 400 .88rem/1.7 var(--font-mono); color: var(--ink); overflow-x: auto; }
 
-/* ---------- карта знаний ---------- */
 .map-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; align-items: start; }
 .map-card { padding: 22px; }
 .map-top { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; margin-bottom: 12px; }
@@ -321,7 +310,6 @@ h3 { font-size: 1.15rem; line-height: 1.3; }
 .graph .node:focus-visible { outline: none; }
 .graph .node:focus-visible .track { stroke: var(--warm); }
 
-/* ---------- эксперимент ---------- */
 .lab { display: flex; flex-direction: column; gap: 22px; }
 .lab-intro { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px; align-items: start; }
 .lab-intro p { color: var(--mut); margin-top: 12px; }
@@ -382,14 +370,12 @@ table.t td:not(:first-child), table.t th:not(:first-child) { text-align: right; 
 .t-wrap { overflow-x: auto; }
 .say { padding: 16px 20px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--line); }
 
-/* ---------- под капотом ---------- */
 .hood { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .hood .card { display: flex; flex-direction: column; gap: 12px; }
 .hood p { color: var(--mut); font-size: .98rem; }
 .hood .formula { color: var(--ink); }
 .topic-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 
-/* ---------- подвал, уведомления ---------- */
 .site-footer { padding-block: 40px; border-top: 1px solid var(--line); color: var(--mut); font-size: .94rem; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 32px; }
 #toasts { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 10px; z-index: 60; max-width: calc(100vw - 36px); }
@@ -397,7 +383,6 @@ table.t td:not(:first-child), table.t th:not(:first-child) { text-align: right; 
 .toast.gold { background: var(--warm); color: #1b1200; }
 #confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50; }
 
-/* ---------- адаптивность ---------- */
 @media (max-width: 980px) {
   .hero-grid, .train-grid, .map-grid, .lab-intro { grid-template-columns: minmax(0, 1fr); }
   .hero-grid { padding-block: 48px 56px; gap: 36px; }
@@ -421,11 +406,8 @@ table.t td:not(:first-child), table.t th:not(:first-child) { text-align: right; 
   * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
 
-/* пояснение над заданием */
 .reason { margin: 0 0 16px; padding: 12px 16px; border-radius: 12px; background: rgba(var(--acc-rgb), .09); border: 1px solid rgba(var(--acc-rgb), .35); font-size: .95rem; line-height: 1.5; }
 .reason b { font-family: var(--font-head); font-weight: 600; }
-
-/* Учебник: маршрут, страница урока, интерактивные модели, ссылки. */
 
 .learn-grid { display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 22px; align-items: start; }
 .learn-side { display: flex; flex-direction: column; gap: 18px; min-width: 0; position: sticky; top: 84px; }
@@ -485,7 +467,6 @@ table.t td:not(:first-child), table.t th:not(:first-child) { text-align: right; 
 .link-card .lt::after { content: ' ↗'; color: var(--mut); font-weight: 400; }
 .link-card .ld { font-size: .82rem; color: var(--mut); line-height: 1.35; }
 
-/* ---------- интерактивные модели ---------- */
 .widget { border: 1.5px solid var(--line2); border-radius: 16px; padding: 20px; background: var(--surface2); display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 .whint { color: var(--mut); font-size: .95rem; }
 .wrow { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
@@ -555,7 +536,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
 }
 .panel-btns { display: flex; flex-wrap: wrap; gap: 10px; }
 
-/* виджеты новых тем */
 .calltree ul { list-style: none; margin: 0; padding-left: 22px; border-left: 2px solid var(--line2); }
 .calltree > ul { padding-left: 0; border: 0; }
 .calltree li { margin: 4px 0; }
@@ -576,7 +556,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
 .gsvg .gc { fill: var(--acc); font: 700 17px var(--font-head); text-anchor: middle; }
 .wsub { font-family: var(--font-body); font-weight: 600; font-size: .95rem; margin: 10px 0 2px; }
 
-/* ---------- план и экзамен ---------- */
 .pl-card { display: flex; flex-direction: column; gap: 14px; }
 .pl-card h3 { font-size: 1.15rem; }
 .pl-plan, .ex-wrap { display: flex; flex-direction: column; gap: 18px; }
@@ -679,7 +658,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
           <a class="btn ghost" href="#how">Как это работает</a>
         </div>
         <ul class="facts">
-          <li><b>29</b>уроков по темам ЕГЭ</li>
+          <li><b>35</b>уроков по темам ЕГЭ</li>
           <li><b>3</b>уровня заданий</li>
           <li><b>∞</b>вариантов заданий</li>
         </ul>
@@ -689,7 +668,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         <figcaption class="viz-live">
           <span class="dot" aria-hidden="true"></span>
           <p id="heroLive">Виртуальный ученик решает задания, а система оценивает его знания.</p>
-          <span class="tally num" id="heroTally">0/29</span>
+          <span class="tally num" id="heroTally">0/35</span>
         </figcaption>
       </figure>
     </div>
@@ -726,7 +705,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         <button class="tab" role="tab" id="tabbtn-lab" aria-controls="tab-lab" aria-selected="false" type="button">Эксперимент</button>
       </div>
 
-      <!-- Учебник -->
       <div id="tab-learn" role="tabpanel" aria-labelledby="tabbtn-learn">
         <div class="learn-grid">
           <aside class="learn-side">
@@ -745,13 +723,10 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         </div>
       </div>
 
-      <!-- План -->
       <div id="tab-plan" role="tabpanel" aria-labelledby="tabbtn-plan" hidden><div id="planRoot"></div></div>
 
-      <!-- Экзамен -->
       <div id="tab-exam" role="tabpanel" aria-labelledby="tabbtn-exam" hidden><div id="examRoot"></div></div>
 
-      <!-- Тренажёр -->
       <div id="tab-train" role="tabpanel" aria-labelledby="tabbtn-train" hidden>
         <div class="train-grid">
           <div class="train-main">
@@ -793,7 +768,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
               <div class="ring-row">
                 <div class="ring" role="img" aria-label="Освоено тем">
                   <svg viewBox="0 0 124 124"><circle class="trk" cx="62" cy="62" r="52"/><circle class="arc" id="ringArc" cx="62" cy="62" r="52"/></svg>
-                  <div class="ring-mid"><b class="num" id="ringNum">0/29</b><span>тем освоено</span></div>
+                  <div class="ring-mid"><b class="num" id="ringNum">0/35</b><span>тем освоено</span></div>
                 </div>
                 <dl class="kv4">
                   <div><dt>Решено</dt><dd class="num" id="stSolved">0</dd></div>
@@ -818,7 +793,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         </div>
       </div>
 
-      <!-- Карта знаний -->
       <div id="tab-map" role="tabpanel" aria-labelledby="tabbtn-map" hidden>
         <div class="map-grid">
           <div class="card map-card lift">
@@ -835,7 +809,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         </div>
       </div>
 
-      <!-- Эксперимент -->
       <div id="tab-lab" role="tabpanel" aria-labelledby="tabbtn-lab" hidden>
         <div class="lab">
           <div class="card lab-intro">
@@ -845,7 +818,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
             </div>
             <ol class="lab-steps">
               <li>Создаём учеников со случайными скрытыми знаниями.</li>
-              <li>Каждый режим даёт им по 145 заданий.</li>
+              <li>Каждый режим даёт им по 175 заданий.</li>
               <li>Считаем, сколько тем ученики освоили по-настоящему.</li>
             </ol>
           </div>
@@ -876,7 +849,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
               <summary>Параметры опыта</summary>
               <div class="params-grid">
                 <label for="pN">Учеников<input id="pN" type="number" min="20" max="3000" step="10" value="500"></label>
-                <label for="pS">Заданий<input id="pS" type="number" min="10" max="300" step="5" value="145"></label>
+                <label for="pS">Заданий<input id="pS" type="number" min="10" max="300" step="5" value="175"></label>
                 <label for="pSeed">Начальное число<input id="pSeed" type="number" step="1" value="2026"></label>
               </div>
               <p class="mass-note">При одинаковых параметрах результат всегда одинаковый: опыт можно повторить.</p>
@@ -935,15 +908,10 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
 <canvas id="confetti" aria-hidden="true"></canvas>
 
 <script>
-/* js/engine.js */
-/* Умный помощник по информатике — ядро.
-   База знаний, генераторы заданий, модель ученика (BKT), выбор задания, симуляция.
-   Не зависит от интерфейса: один и тот же код работает в приложении и в эксперименте. */
+
 (function (root) {
   'use strict';
 
-  /* ---------- 1. База знаний: темы, веса и опорные темы ---------- */
-  /* Порядок важен: опорные темы идут раньше зависимых. Он же задаёт порядок уроков в учебнике. */
   const TOPICS = [
     { id: 'num',     name: 'Системы счисления',                  pre: [],          w: 1.0 },
     { id: 'hex',     name: 'Двоичная и 16-ричная записи',        pre: ['num'],     w: 0.8 },
@@ -973,20 +941,23 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     { id: 'seq',     name: 'Обработка последовательностей',      pre: ['algo'],    w: 0.7 },
     { id: 'greedy',  name: 'Жадные алгоритмы и перебор',         pre: ['seq'],     w: 0.7 },
     { id: 'prog',    name: 'Количество программ исполнителя',    pre: ['algo'],    w: 0.8 },
-    { id: 'grid',    name: 'Путь по таблице (динамика)',         pre: ['prog'],    w: 0.7 }
+    { id: 'grid',    name: 'Путь по таблице (динамика)',         pre: ['prog'],    w: 0.7 },
+    { id: 'games2',  name: 'Выигрышные стратегии (19–21)',       pre: ['games'],   w: 0.9 },
+    { id: 'par',     name: 'Параллельные процессы (22)',         pre: ['graph'],   w: 0.7 },
+    { id: 'str2',    name: 'Строки: длина подстроки (24)',       pre: ['text'],    w: 0.7 },
+    { id: 'mask',    name: 'Числа по маске и делители (25)',     pre: ['div'],     w: 0.7 },
+    { id: 'sched',   name: 'Заявки и отрезки (26)',              pre: ['greedy'],  w: 0.7 },
+    { id: 'pref',    name: 'Подотрезки и остатки (27)',          pre: ['seq'],     w: 0.8 }
   ];
 
   const BY_ID = {};
   TOPICS.forEach(t => { BY_ID[t.id] = t; });
 
-  /* параметры модели ученика (байесовское отслеживание знаний, BKT) */
   const P = { init: 0.25, learn: 0.12, slip: 0.10, guess: 0.15, master: 0.90 };
 
-  /* В эксперименте на каждую тему приходится по 5 заданий, а «почти всё освоено» — это 7/8 тем (для 29 тем — 26). */
   const DEFAULT_STEPS = TOPICS.length * 5;
   const REACH = Math.ceil(TOPICS.length * 7 / 8);
 
-  /* ---------- 2. Вспомогательные функции ---------- */
   function mulberry32(a) {
     return function () {
       a |= 0; a = a + 0x6D2B79F5 | 0;
@@ -1004,7 +975,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   }
   function ceilLog2(n) { let k = 0; while ((1 << k) < n) k++; return k; }
 
-  /* ---------- 3. Генераторы заданий (по теме и уровню 1–3) ---------- */
   function exprNode(r, vars, depth, ops) {
     if (depth === 0) return { t: 'v', n: pick(r, vars), neg: r() < 0.3 };
     return { t: 'o', op: pick(r, ops), l: exprNode(r, vars, depth - 1, ops), r: exprNode(r, vars, depth - 1, ops) };
@@ -1222,7 +1192,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         code: ['    A  B  C'].concat(rows).join('\n'), table: true, a: String(t.v(c)),
         e: `При копировании на один столбец вправо и одну строку вниз сдвигаются те части ссылок, перед которыми нет знака $. В D2 получится формула ${t.g}. Подставляем: ${t.s(c)} = ${t.v(c)}.` };
     },
-    /* ---------- новые темы (ЕГЭ: задания 2–6, 12–15, 17–26) ---------- */
+
     numexpr(l, r) {
       const ones = x => x.toString(2).split('').filter(c => c === '1').length;
       if (l === 1) {
@@ -1511,7 +1481,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     }
   };
 
-  /* Граф дорог без циклов: считаем, сколькими путями можно добраться из первого города в последний. */
   function dagTask(l, r) {
     const n = l === 1 ? 5 : l === 2 ? 6 : 7;
     const names = n === 7 ? ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'К'] : n === 6 ? ['А', 'Б', 'В', 'Г', 'Д', 'К'] : ['А', 'Б', 'В', 'Г', 'К'];
@@ -1553,6 +1522,153 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
       e: `Путей из ${first} в ${names[v]} — ${g.s.from[v]}, путей из ${names[v]} в ${last} — ${g.s.to[v]}. Выбираем любой путь до ${names[v]} и любой после него: ${g.s.from[v]}·${g.s.to[v]} = ${c}.` };
   }
 
+  const AB = ['A', 'B', 'C'];
+  const rstr = (r, n, al) => Array.from({ length: n }, () => pick(r, al)).join('');
+  const gameBase = (T, a) => `Два игрока, Петя и Ваня, играют в следующую игру. Перед игроками лежат две кучи камней. Игроки ходят по очереди, первый ход делает Петя. За один ход игрок может добавить в любую кучу один камень или увеличить количество камней в любой куче в два раза. Игра завершается, когда суммарное количество камней в двух кучах становится не менее ${T}. Победителем считается игрок, сделавший последний ход. В начальный момент в первой куче было ${a} камней, во второй — S камней, 1 ≤ S ≤ ${T - a - 1}. `;
+  function gameSets(T, a) {
+    const done = (x, y) => x + y >= T, mv = (x, y) => [[x + 1, y], [x, y + 1], [x * 2, y], [x, y * 2]], memo = {};
+    const W = (x, y, k) => {
+      const key = x + ',' + y + ',' + k; if (key in memo) return memo[key];
+      let res = false; const ms = mv(x, y);
+      for (const m of ms) if (done(m[0], m[1])) { res = true; break; }
+      if (!res && k > 1) for (const m of ms) { if (done(m[0], m[1])) continue; if (mv(m[0], m[1]).every(q => !done(q[0], q[1]) && W(q[0], q[1], k - 1))) { res = true; break; } }
+      return memo[key] = res;
+    };
+    const V = (x, y, k) => mv(x, y).every(m => !done(m[0], m[1]) && W(m[0], m[1], k));
+    const A = [], B = [], C = [];
+    for (let S = 1; S <= T - a - 1; S++) {
+      if (!W(a, S, 1) && W(a, S, 2)) A.push(S);
+      if (V(a, S, 2)) B.push(S);
+      if (V(a, S, 2) && !V(a, S, 1)) C.push(S);
+    }
+    return { A, B, C };
+  }
+  const lst = a => a.slice(0, 12).join(', ') + (a.length > 12 ? ', …' : '');
+  const GEN2 = {
+    games2(l, r) {
+      for (let t = 0; t < 300; t++) {
+        const T = ri(r, 30, 70), a = ri(r, 3, 10), g = gameSets(T, a);
+        if (g.A.length < 1 || g.B.length < 1 || g.C.length < 1) continue;
+        const base = gameBase(T, a);
+        if (l === 1) return { q: base + 'Найдите наименьшее значение S, при котором Петя не может выиграть первым ходом, но у Пети есть стратегия, позволяющая ему выиграть своим вторым ходом при любой игре Вани.', a: String(g.A[0]), e: `Разбираем позиции с конца игры. Значения S, при которых Петя выигрывает вторым ходом, а первым не может: ${lst(g.A)}. Наименьшее из них ${g.A[0]}.` };
+        if (l === 2) return { q: base + 'Найдите наибольшее значение S, при котором у Вани есть стратегия, позволяющая ему выиграть первым или вторым своим ходом при любой игре Пети (и Петя не может выиграть первым ходом).', a: String(g.B[g.B.length - 1]), e: `Проверяем все ходы Пети: после каждого из них Ваня должен выиграть за один или два хода. Подходят S = ${lst(g.B)}. Наибольшее ${g.B[g.B.length - 1]}.` };
+        return { q: base + 'Найдите наименьшее значение S, при котором у Вани есть стратегия, позволяющая ему выиграть своим вторым ходом при любой игре Пети, но нет стратегии, позволяющей выиграть первым ходом при любой игре Пети.', a: String(g.C[0]), e: `Выбираем те S, при которых Ваня выигрывает за два хода (${lst(g.B)}), и убираем те, где он может выиграть уже первым ходом. Остаётся ${lst(g.C)}. Наименьшее ${g.C[0]}.` };
+      }
+      return GEN2.games2(l, r);
+    },
+    par(l, r) {
+      for (let t = 0; t < 300; t++) {
+        const n = l === 1 ? 6 : l === 2 ? 7 : 8, dur = [], dep = [];
+        for (let i = 0; i < n; i++) {
+          dur.push(ri(r, 1, 9)); const d = [];
+          if (i > 0) { d.push(ri(r, 0, i - 1)); if (i > 1 && r() < 0.3) { const x = ri(r, 0, i - 1); if (d.indexOf(x) < 0) d.push(x); } }
+          dep.push(d.sort((p, q) => p - q));
+        }
+        const st = [], en = [];
+        for (let i = 0; i < n; i++) { st[i] = dep[i].reduce((m, j) => Math.max(m, en[j]), 0); en[i] = st[i] + dur[i]; }
+        const fin = Math.max.apply(null, en);
+        let conc = 0; for (let tm = 0; tm < fin; tm++) { let c = 0; for (let i = 0; i < n; i++) if (st[i] <= tm && tm < en[i]) c++; if (c > conc) conc = c; }
+        const X = ri(r, Math.floor(n / 2), n - 1);
+        if (conc < 2 || en[X] === fin && l === 2) continue;
+        const code = ['ID  Время  Зависит от'].concat(dur.map((d, i) => String(i + 1).padEnd(3) + ' ' + String(d).padEnd(6) + ' ' + (dep[i].length ? dep[i].map(j => j + 1).join(';') : '0'))).join('\n');
+        const intro = 'В таблице указаны процессы, время их выполнения (мс) и номера процессов, от которых они зависят. Процесс начинается, как только завершатся все процессы, от которых он зависит (если зависимостей нет — в момент 0). Независимые процессы выполняются параллельно, число процессоров не ограничено. ';
+        const steps = en.map((e, i) => `${i + 1}: ${st[i]}–${e}`).join(', ');
+        if (l === 1) return { q: intro + 'За какое наименьшее время (мс) будут выполнены все процессы?', code, table: true, a: String(fin), e: `Для каждого процесса считаем время начала и конца (начало — максимум концов процессов, от которых он зависит). Получаем: ${steps}. Все процессы завершатся к ${fin} мс.` };
+        if (l === 2) return { q: intro + `В какой момент времени (мс) завершится процесс ${X + 1}?`, code, table: true, a: String(en[X]), e: `Считаем начала и концы по порядку: ${steps}. Процесс ${X + 1} завершается в ${en[X]} мс.` };
+        return { q: intro + 'Какое наибольшее количество процессов может выполняться одновременно, если каждый процесс запускается как можно раньше?', code, table: true, a: String(conc), e: `Начала и концы процессов: ${steps}. Просматриваем каждую миллисекунду и считаем работающие процессы. Больше всего их одновременно ${conc}.` };
+      }
+      return GEN2.par(l, r);
+    },
+    str2(l, r) {
+      for (let t = 0; t < 300; t++) {
+        const n = l === 1 ? 24 : l === 2 ? 28 : 30, s = rstr(r, n, AB), k = ri(r, 1, 2);
+        let best = 0;
+        for (let i = 0; i < n; i++) for (let j = i; j < n; j++) {
+          const w = s.slice(i, j + 1), c = ch => w.split(ch).length - 1; let ok;
+          if (l === 1) ok = c('B') <= k;
+          else if (l === 2) ok = c('A') === c('B');
+          else ok = c('A') > 0 && c('B') > 0 && c('C') > 0 && !/(.)\1/.test(w);
+          if (ok && w.length > best) best = w.length;
+        }
+        if (best < 3 || best === n) continue;
+        const q = l === 1 ? `Дана строка s = "${s}". Найдите длину самой длинной подстроки (подряд идущих символов), в которой буква B встречается не более ${k} ${k === 1 ? 'раза' : 'раз'}.`
+          : l === 2 ? `Дана строка s = "${s}". Найдите длину самой длинной подстроки, в которой букв A и букв B поровну.`
+          : `Дана строка s = "${s}". Найдите длину самой длинной подстроки, в которой есть все три буквы A, B и C и нет двух одинаковых символов подряд.`;
+        const e = l === 1 ? `Перебираем подстроки и считаем в них букву B. Самая длинная подстрока, где B не больше ${k} раз, имеет длину ${best}.`
+          : l === 2 ? `Для каждой подстроки сравниваем количество букв A и B. Самая длинная подстрока с равным количеством имеет длину ${best}.`
+          : `Для каждой подстроки проверяем: есть ли A, B, C и нет ли соседних одинаковых символов. Наибольшая длина ${best}.`;
+        return { q, a: String(best), e };
+      }
+      return GEN2.str2(l, r);
+    },
+    mask(l, r) {
+      const K = pick(r, [7, 9, 11, 13, 17, 19]);
+      for (let t = 0; t < 300; t++) {
+        const d = () => String(ri(r, 0, 9));
+        if (l === 1) {
+          const len = 5, m = [String(ri(r, 1, 9)), d(), '?', d(), '?'].map(x => x).join(''), rx = new RegExp('^' + m.replace(/\?/g, '\\d') + '$');
+          let c = 0; for (let v = 10000; v < 100000; v++) if (v % K === 0 && rx.test(String(v))) c++;
+          if (c < 1) continue;
+          return { q: `Назовём маской числа последовательность цифр, в которой символ «?» обозначает ровно одну произвольную цифру. Сколько существует чисел, соответствующих маске ${m}, которые делятся на ${K} без остатка?`, a: String(c), e: `Подставляем вместо «?» все цифры (${len === 5 ? '100' : ''} вариантов) и считаем числа, которые делятся на ${K}. Таких ${c}.` };
+        }
+        const m = String(ri(r, 1, 9)) + '*' + d() + (l === 3 ? '?' : d()), rx = new RegExp('^' + m.replace(/\?/g, '\\d').replace('*', '\\d*') + '$'), LIM = 100000, hits = [];
+        for (let v = K; v <= LIM; v += K) if (rx.test(String(v))) hits.push(v);
+        if (hits.length < 3) continue;
+        const intro = `Маска числа — последовательность цифр, где «?» обозначает ровно одну произвольную цифру, а «*» — любую последовательность цифр произвольной длины (в том числе пустую). `;
+        if (l === 2) return { q: intro + `Сколько чисел, не превышающих ${LIM}, соответствуют маске ${m} и делятся на ${K} без остатка?`, a: String(hits.length), e: `Перебираем числа, кратные ${K}, до ${LIM} и проверяем каждое на соответствие маске ${m}. Подходящих ${hits.length}.` };
+        return { q: intro + `Найдите наибольшее число, не превышающее ${LIM}, которое соответствует маске ${m} и делится на ${K} без остатка.`, a: String(hits[hits.length - 1]), e: `Идём по числам, кратным ${K}, от ${LIM} вниз и ищем первое, подходящее под маску ${m}. Это ${hits[hits.length - 1]}.` };
+      }
+      return GEN2.mask(l, r);
+    },
+    sched(l, r) {
+      for (let t = 0; t < 300; t++) {
+        const n = l === 3 ? 9 : 8, iv = [];
+        for (let i = 0; i < n; i++) { const s = ri(r, 1, 18); iv.push({ s, f: s + ri(r, 1, 6), w: ri(r, 1, 9) }); }
+        const code = ['N  Начало  Конец' + (l === 3 ? '  Вес' : '')].concat(iv.map((x, i) => String(i + 1).padEnd(2) + ' ' + String(x.s).padEnd(7) + ' ' + String(x.f).padEnd(5) + (l === 3 ? ' ' + x.w : ''))).join('\n');
+        if (l === 1) {
+          const o = iv.slice().sort((a, b) => a.f - b.f || a.s - b.s); let end = 0, c = 0; o.forEach(x => { if (x.s >= end) { c++; end = x.f; } });
+          if (c < 3) continue;
+          return { q: 'Заявки на использование зала заданы началом и концом (конец в расчёт не входит: если одна заявка заканчивается в момент, когда начинается другая, они не пересекаются). Какое наибольшее количество заявок можно выполнить?', code, table: true, a: String(c), e: 'Сортируем заявки по времени окончания и выбираем жадно: берём заявку, которая заканчивается раньше всех, затем следующую, которая начинается не раньше конца предыдущей, и так далее. Получается ' + c + '.' };
+        }
+        if (l === 2) {
+          let mx = 0; for (let tm = 0; tm <= 30; tm++) { const c = iv.filter(x => x.s <= tm && tm < x.f).length; if (c > mx) mx = c; }
+          if (mx < 3) continue;
+          return { q: 'Лекции заданы началом и концом (конец в расчёт не входит). Какое наименьшее количество аудиторий нужно, чтобы провести все лекции?', code, table: true, a: String(mx), e: `В каждый момент времени считаем, сколько лекций идёт одновременно. Наибольшее такое число равно ${mx}, столько аудиторий и нужно.` };
+        }
+        let best = 0;
+        for (let m = 0; m < (1 << n); m++) {
+          const ch = []; for (let i = 0; i < n; i++) if (m >> i & 1) ch.push(iv[i]);
+          ch.sort((a, b) => a.s - b.s); let ok = true, sum = 0;
+          for (let i = 0; i < ch.length; i++) { sum += ch[i].w; if (i && ch[i].s < ch[i - 1].f) ok = false; }
+          if (ok && sum > best) best = sum;
+        }
+        const tot = iv.reduce((a, x) => a + x.w, 0);
+        if (best >= tot) continue;
+        return { q: 'Заявки заданы началом, концом (конец в расчёт не входит) и стоимостью. Одновременно выполнять пересекающиеся заявки нельзя. Какую наибольшую суммарную стоимость можно получить?', code, table: true, a: String(best), e: `Перебираем все наборы заявок, отбрасываем наборы с пересечениями и выбираем набор с наибольшей суммой стоимостей. Она равна ${best}.` };
+      }
+      return GEN2.sched(l, r);
+    },
+    pref(l, r) {
+      for (let t = 0; t < 300; t++) {
+        const n = ri(r, 10, 13), a = Array.from({ length: n }, () => ri(r, 1, 20)), k = pick(r, [3, 4, 5, 6, 7]), list = a.join(', ');
+        if (l === 1) {
+          let c = 0; for (let i = 0; i < n; i++) { let s = 0; for (let j = i; j < n; j++) { s += a[j]; if (s % k === 0) c++; } }
+          if (c < 2) continue;
+          return { q: `Дана последовательность чисел: ${list}. Сколько в ней непрерывных подотрезков (из одного или нескольких подряд идущих чисел), сумма которых делится на ${k}?`, a: String(c), e: `Для каждого начала подотрезка наращиваем конец, считая сумму, и отмечаем случаи, когда сумма кратна ${k}. Всего ${c}. (Быстрее — через префиксные суммы и их остатки.)` };
+        }
+        if (l === 2) {
+          let b = 0; for (let i = 0; i < n; i++) { let s = 0; for (let j = i; j < n; j++) { s += a[j]; if (s % k === 0 && j - i + 1 > b) b = j - i + 1; } }
+          if (b < 2) continue;
+          return { q: `Дана последовательность чисел: ${list}. Найдите наибольшую длину непрерывного подотрезка, сумма элементов которого делится на ${k}.`, a: String(b), e: `Перебираем подотрезки и запоминаем наибольшую длину среди тех, у которых сумма кратна ${k}. Она равна ${b}.` };
+        }
+        let p = 0, q = 0; a.forEach(x => { const c = Math.max(q, p + x); p = q; q = c; });
+        return { q: `Дана последовательность чисел: ${list}. Выбираем несколько чисел так, чтобы никакие два выбранных не стояли рядом. Какую наибольшую сумму можно получить?`, a: String(q), e: `Идём слева направо и для каждого числа выбираем лучшее из двух: взять его вместе с лучшей суммой до предыдущего соседа или пропустить. Итог ${q}.` };
+      }
+      return GEN2.pref(l, r);
+    }
+  };
+  Object.assign(GEN, GEN2);
+
   function makeTask(topicId, level, r) {
     const t = GEN[topicId](level, r);
     t.topic = topicId; t.level = level;
@@ -1561,7 +1677,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   function norm(s) { return String(s).trim().replace(/\s+/g, '').replace(',', '.').toLowerCase(); }
   function check(task, input) { return norm(input) === norm(task.a); }
 
-  /* ---------- 4. Модель ученика: BKT ---------- */
   function newState() {
     const topics = {};
     TOPICS.forEach(t => { topics[t.id] = { m: P.init, n: 0, ok: 0, h: [P.init] }; });
@@ -1587,7 +1702,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   }
   const mastered = state => TOPICS.filter(t => state.topics[t.id].m >= P.master).length;
 
-  /* ---------- 5. Стратегии выбора следующего задания ---------- */
   function choose(state, strategy, r) {
     if (strategy === 'random') {
       const t = pick(r, TOPICS);
@@ -1616,7 +1730,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     return { topic: best, level, reason: why, scores };
   }
 
-  /* ---------- 6. Симуляция виртуальных учеников ---------- */
   function runStudent(strategy, steps, r, rec) {
     const base = 0.1 + 0.4 * r(), K = {};
     TOPICS.forEach(t => { K[t.id] = t.pre.every(p => K[p]) && r() < base ? 1 : 0; });
@@ -1669,7 +1782,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     };
   }
 
-  /* один виртуальный ученик пошагово: для наглядной «гонки» и демонстрации на главной */
   function trace(strategy, steps, seed) {
     const rec = {};
     const o = runStudent(strategy, steps, mulberry32(seed), rec);
@@ -1682,8 +1794,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   else root.Engine = api;
 })(typeof window !== 'undefined' ? window : globalThis);
 
-/* js/util.js */
-/* Общие мелочи: форматирование, подсветка кода, создание элементов, события между модулями. */
 (function (root) {
   'use strict';
 
@@ -1692,7 +1802,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const reducedMotion = () => !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
-  /* h('div', {class:'x'}, 'текст', дочерний_элемент) */
   function h(tag, attrs) {
     const e = document.createElement(tag);
     for (const k in (attrs || {})) {
@@ -1709,7 +1818,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     return e;
   }
 
-  /* подсветка кода на Python: числа и ключевые слова, построчно */
   function highlight(code) {
     return code.split('\n').map(line =>
       '<div>' + esc(line)
@@ -1718,14 +1826,11 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     ).join('');
   }
 
-  /* модули общаются событиями: Util.go('learn', 'num') открывает урок, Util.go('train', 'num') — тренажёр */
   const go = (name, id) => document.dispatchEvent(new CustomEvent('ih:' + name, { detail: id }));
 
   root.Util = { pct, fmt, esc, h, highlight, go, reducedMotion };
 })(window);
 
-/* js/store.js */
-/* Хранилище: прогресс ученика и настройки сохраняются в localStorage браузера. */
 (function (root) {
   'use strict';
   const KEY = 'infoHelperState_v2', OLD = 'infoHelperState_v1';
@@ -1733,7 +1838,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   const subs = [];
 
   function read(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
-  function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* без хранилища тоже работает */ } }
+  function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {  } }
 
   function normalize(s) {
     const fresh = Engine.newState();
@@ -1778,7 +1883,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         Store.save();
       }
     },
-    /* журнал занятий по дням: нужен для плана подготовки и серии дней */
+
     today() { return dateStr(new Date()); },
     day(d) {
       const A = Store.state.activity;
@@ -1807,10 +1912,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.Store = Store;
 })(window);
 
-/* js/lessons.js */
-/* Учебные материалы: по одному короткому уроку на каждую тему базы знаний.
-   Структура урока: что нужно знать, пример, интерактивная модель (widgets.js),
-   частые ошибки, контрольное задание и ссылки на дополнительные материалы. */
 (function (root) {
   'use strict';
 
@@ -2288,10 +2389,106 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
       },
       mistakes: ['Выбирают лучшее число на каждом шаге («жадно») вместо лучшей суммы.', 'Забывают добавлять число самой клетки.'],
       links: ['wikiDP', 'poly', 'sdamgia', 'yandex']
+    },
+    games2: {
+      time: 6, widget: 'games2',
+      lead: 'В задачах 19–21 нужно понять, кто выигрывает при самой лучшей игре. Для этого разбирают позиции с конца игры.',
+      theory: [
+        '<b>Конец игры.</b> Позиция, в которой уже набрано нужное число камней, закончена. Выигрывает тот, кто сделал последний ход.',
+        '<b>Выигрыш за один ход.</b> Позиция выигрышная, если есть ход, после которого игра закончится.',
+        '<b>Выигрыш вторым ходом.</b> Нужно, чтобы после какого-то твоего хода любой ответ соперника не заканчивал игру и приводил к позиции, где ты выигрываешь сразу.',
+        '<b>Задания 19, 20, 21.</b> Это те же рассуждения на глубину 1, 2 и 3 хода. Подходящие значения S проверяют перебором.'
+      ],
+      example: {
+        title: 'Куча 1: 5 камней, куча 2: S камней, порог 20. Выигрывает ли Петя первым ходом при S = 8?',
+        steps: ['Ходы: (6, 8), (5, 9), (10, 8), (5, 16).', 'В позиции (10, 8) сумма 18 < 20; в (5, 16) сумма 21 ≥ 20.', 'Значит, ход «удвоить вторую кучу» сразу заканчивает игру: Петя выигрывает первым ходом.']
+      },
+      mistakes: ['Проверяют только ход самого игрока и забывают про все ответы соперника.', 'Не учитывают, что выигрыш вторым ходом не должен позволять сопернику закончить игру раньше.'],
+      links: ['wikiGame', 'poly', 'sdamgia', 'yandex']
+    },
+    par: {
+      time: 5, widget: 'par',
+      lead: 'В задаче 22 есть процессы, которые ждут друг друга. Нужно понять, когда всё закончится и сколько процессов работает одновременно.',
+      theory: [
+        '<b>Начало процесса.</b> Процесс стартует, когда закончились все процессы, от которых он зависит. Если зависимостей нет, он стартует в момент 0.',
+        '<b>Конец.</b> Конец = начало + время выполнения.',
+        '<b>Итог.</b> Все процессы заканчиваются в момент, равный самому большому концу.',
+        '<b>Одновременность.</b> Для каждого момента времени считают, сколько интервалов [начало; конец) его содержат.'
+      ],
+      example: {
+        title: 'Процесс 1 — 3 мс, процесс 2 — 4 мс (после 1), процесс 3 — 2 мс (после 1), процесс 4 — 1 мс (после 2 и 3)',
+        steps: ['Процесс 1: 0–3.', 'Процессы 2 и 3 стартуют в 3: 3–7 и 3–5.', 'Процесс 4 ждёт оба и стартует в 7: 7–8.', 'Все процессы закончатся к 8 мс.']
+      },
+      mistakes: ['Складывают времена всех процессов подряд, хотя независимые идут параллельно.', 'Берут начало процесса по самой ранней зависимости, а не по самой поздней.'],
+      links: ['wikiGraph', 'poly', 'sdamgia', 'yandex']
+    },
+    str2: {
+      time: 5, widget: 'str2',
+      lead: 'В задаче 24 нужно найти самую длинную подстроку с особым условием. Это перебор или «скользящее окно».',
+      theory: [
+        '<b>Подстрока.</b> Это подряд идущие символы строки: s[i:j + 1].',
+        '<b>Перебор.</b> Два цикла выбирают начало i и конец j, внутри проверяем условие. Для длины до 30 символов этого достаточно.',
+        '<b>Окно.</b> Для условия «буква B не больше k раз» окно расширяют вправо и сдвигают левый край, когда условие нарушено.',
+        '<b>Ответ.</b> Запоминают наибольшую длину подходящей подстроки.'
+      ],
+      example: {
+        title: 'Строка ABBAB, буква B не больше одного раза',
+        code: 's = "ABBAB"\nbest = 0\nfor i in range(len(s)):\n    for j in range(i, len(s)):\n        w = s[i:j + 1]\n        if w.count("B") <= 1:\n            best = max(best, len(w))\nprint(best)',
+        steps: ['Подстрока "AB" подходит, длина 2.', 'Подстрока "ABB" не подходит: две буквы B.', '"BA" и "AB" подходят, длина 2. Ответ: 2.']
+      },
+      mistakes: ['Путают подстроку (подряд) и подпоследовательность (с пропусками).', 'Теряют самую длинную подстроку, когда длина текущей обнуляется слишком рано.'],
+      links: ['wikiStr', 'pyFlow', 'poly', 'yandex']
+    },
+    mask: {
+      time: 5, widget: 'mask',
+      lead: 'В задаче 25 нужно найти числа по маске, которые делятся на заданное число. Проще всего перебирать только кратные числа.',
+      theory: [
+        '<b>Маска.</b> Символ «?» — ровно одна любая цифра. Символ «*» — любая цепочка цифр, в том числе пустая.',
+        '<b>Не перебирайте всё.</b> Если нужно число, кратное K, идите по числам K, 2K, 3K и т. д.',
+        '<b>Проверка маски.</b> Преобразуйте маску в шаблон, например, ? → любая цифра, * → любая цепочка, и проверьте число как строку.',
+        '<b>Наибольшее или наименьшее.</b> Идут от конца диапазона вниз или от начала вверх и берут первое подходящее.'
+      ],
+      example: {
+        title: 'Сколько чисел до 1000 по маске 1?5 делятся на 5?',
+        steps: ['Числа по маске: 105, 115, …, 195, всего 10.', 'Все они оканчиваются на 5, поэтому делятся на 5.', 'Ответ: 10.']
+      },
+      mistakes: ['Забывают, что «*» может быть пустой цепочкой.', 'Перебирают все числа вместо кратных, и программа работает слишком долго.'],
+      links: ['wikiDiv', 'pyFlow', 'poly', 'yandex']
+    },
+    sched: {
+      time: 5, widget: 'sched',
+      lead: 'В задаче 26 есть заявки с началом и концом. Нужно выбрать как можно больше заявок без пересечений или понять, сколько залов нужно.',
+      theory: [
+        '<b>Больше заявок.</b> Сортируйте заявки по времени окончания и берите ту, которая заканчивается раньше, если она начинается не раньше конца предыдущей.',
+        '<b>Сколько залов.</b> Для каждого момента считают, сколько заявок идут одновременно. Нужное число залов — наибольшее из этих чисел.',
+        '<b>Если у заявок есть стоимость.</b> Жадность не всегда работает, поэтому перебирают наборы или используют динамику.',
+        '<b>Граница.</b> Если одна заявка кончается, когда другая начинается, они не пересекаются.'
+      ],
+      example: {
+        title: 'Заявки: 1–4, 3–5, 5–7, 6–8',
+        steps: ['Сортируем по концу: 1–4, 3–5, 5–7, 6–8.', 'Берём 1–4. Заявка 3–5 пересекается, пропускаем.', 'Берём 5–7. Заявка 6–8 пересекается.', 'Ответ: 2 заявки.']
+      },
+      mistakes: ['Сортируют по началу, а не по концу.', 'Считают пересечением случай, когда конец одной равен началу другой.'],
+      links: ['wikiGreedy', 'poly', 'sdamgia', 'yandex']
+    },
+    pref: {
+      time: 6, widget: 'pref',
+      lead: 'В задаче 27 числа очень много, поэтому перебор подотрезков слишком медленный. Выручают префиксные суммы и остатки.',
+      theory: [
+        '<b>Префиксная сумма.</b> P[i] — сумма первых i чисел. Сумма подотрезка от i до j равна P[j] − P[i].',
+        '<b>Кратность.</b> Сумма кратна K, если у P[i] и P[j] одинаковые остатки от деления на K.',
+        '<b>Подсчёт.</b> Идём слева направо и храним, сколько раз встречался каждый остаток. Каждое новое число добавляет столько подотрезков, сколько раз остаток уже был.',
+        '<b>Наибольшая длина.</b> Для каждого остатка запоминаем самую левую позицию.'
+      ],
+      example: {
+        title: 'Последовательность 2, 1, 3, K = 3',
+        steps: ['Префиксные суммы: 0, 2, 3, 6. Остатки: 0, 2, 0, 0.', 'Остаток 0 встречается три раза: пар 3.', 'Это подотрезки [1, 3], [3] и [2, 1, 3]. Ответ: 3.']
+      },
+      mistakes: ['Не добавляют начальную сумму 0.', 'Считают пары остатков по формуле для неравных остатков.'],
+      links: ['wikiPrefix', 'wikiDP', 'poly', 'yandex']
     }
   };
 
-  /* общие ресурсы для раздела «Где учиться дальше» */
   const RESOURCES = [
     { key: 'yandex', note: 'Тренажёр, каталог заданий и разборы вариантов' },
     { key: 'poly', note: 'Теория, разборы заданий и тренажёры' },
@@ -2303,8 +2500,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.Lessons = { LESSONS, LINKS, RESOURCES };
 })(window);
 
-/* js/fx.js */
-/* Визуальные эффекты: фон главной, конфетти и уведомления. */
 (function (root) {
   'use strict';
   const reduce = Util.reducedMotion;
@@ -2385,8 +2580,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.FX = { network, confetti, toast };
 })(window);
 
-/* js/graph.js */
-/* Карта знаний: рисует темы как узлы с кольцами освоения, связи между темами как стрелки. */
 (function (root) {
   'use strict';
   const NS = 'http://www.w3.org/2000/svg';
@@ -2400,12 +2593,12 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     auto: ['Алгоритмы с', 'двоичной записью'], div: ['Делимость', 'и делители'], ttab: ['Таблицы', 'истинности'], leq: ['Логические', 'уравнения'],
     games: ['Теория', 'игр'], db: ['Базы данных', 'и запросы'], text: ['Обработка', 'строк'], editor: ['Исполнитель', '«Редактор»'],
     turtle: ['Исполнитель', '«Черепаха»'], seq: ['Обработка', 'последовательностей'], greedy: ['Жадные', 'алгоритмы'],
-    prog: ['Количество', 'программ'], grid: ['Путь по', 'таблице']
+    prog: ['Количество', 'программ'], grid: ['Путь по', 'таблице'],
+    games2: ['Выигрышные', 'стратегии'], par: ['Параллельные', 'процессы'], str2: ['Длина', 'подстроки'], mask: ['Числа', 'по маске'], sched: ['Заявки и', 'отрезки'], pref: ['Подотрезки', 'и остатки']
   };
   const SHORT = {}, TINY = {};
   Engine.TOPICS.forEach(t => { SHORT[t.id] = TINY[t.id] = LINES[t.id][0]; });
 
-  /* Раскладка: столбец — глубина темы в графе зависимостей. Если в столбце много тем, они идут «зигзагом» в двух подстолбцах. */
   const depthOf = id => { const t = Engine.BY_ID[id]; return t.pre.length ? 1 + Math.max.apply(null, t.pre.map(depthOf)) : 0; };
   function layout() {
     const cols = {}; Engine.TOPICS.forEach(t => { (cols[depthOf(t.id)] = cols[depthOf(t.id)] || []).push(t.id); });
@@ -2510,9 +2703,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.Graph = { create, SHORT, TINY, LINES, POS };
 })(window);
 
-/* js/widgets.js */
-/* Интерактивные модели для уроков. Каждая функция строит свой блок внутри переданного контейнера.
-   Ничего не сохраняется: это просто «песочница», чтобы потрогать тему руками. */
 (function (root) {
   'use strict';
   const h = Util.h;
@@ -2522,7 +2712,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   function num(min, max, val, step) { return h('input', { type: 'number', min, max, value: val, step: step || 1, inputmode: 'numeric' }); }
   function clampInt(v, a, b, d) { v = Math.floor(Number(v)); return isFinite(v) ? Math.max(a, Math.min(b, v)) : d; }
 
-  /* 1. Системы счисления: восемь переключателей битов */
   function numWidget(box) {
     const W = [128, 64, 32, 16, 8, 4, 2, 1];
     let bits = [0, 0, 1, 0, 1, 1, 0, 1];                       // 45
@@ -2548,7 +2737,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 2. Двоичная и 16-ричная записи: разбиение на тетрады */
   function hexWidget(box) {
     const inp = h('input', { type: 'text', value: '10110110', inputmode: 'numeric', maxlength: 16, spellcheck: 'false', 'aria-label': 'Двоичное число' });
     const groups = h('div', { class: 'tetrads' }), out = h('p', { class: 'wsum num' });
@@ -2569,7 +2757,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 3. Поразрядные операции */
   function bitWidget(box) {
     let op = '&';
     const a = num(0, 63, 12), b = num(0, 63, 10), view = h('div', { class: 'bitrows num' }), out = h('p', { class: 'wsum num' });
@@ -2593,7 +2780,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 4. Количество информации: подбор числа бит на символ */
   function infoWidget(box) {
     const n = num(2, 256, 26), k = num(1, 500, 40), out = h('div', { class: 'wcards' });
     function draw() {
@@ -2615,7 +2801,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 5. Комбинаторика: перечисление слов */
   function combWidget(box) {
     const L = 'АБВГД';
     const n = h('input', { type: 'range', min: 2, max: 5, value: 3 }), k = h('input', { type: 'range', min: 2, max: 4, value: 3 });
@@ -2644,7 +2829,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 6. Скорость передачи: единицы измерения */
   function speedWidget(box) {
     const sz = num(1, 100000, 2), su = h('select', { 'aria-label': 'Единица объёма' }), sp = num(1, 100000, 4), spu = h('select', { 'aria-label': 'Единица скорости' });
     [['байт', 8], ['Кбайт', 8 * 1024], ['Мбайт', 8 * 1024 * 1024]].forEach((x, i) => su.appendChild(h('option', { value: x[1], selected: i === 2 ? '' : null }, x[0])));
@@ -2664,7 +2848,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 7. Логика: таблица истинности */
   const EXPR = [
     { t: 'A ∧ B', f: (a, b) => a & b, v: 2 },
     { t: 'A ∨ B', f: (a, b) => a | b, v: 2 },
@@ -2693,7 +2876,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 8. Алгоритмы: пошаговая трассировка */
   const PROGS = [
     {
       name: 'Сумма чисел от 1 до 4', code: ['s = 0', 'for i in range(1, 5):', '    s += i', 'print(s)'], vars: ['i', 's'],
@@ -2731,7 +2913,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 9. Рекурсия: дерево вызовов f(n) = f(n-1) + f(n-2) */
   function recWidget(box) {
     const inp = num(0, 6, 4), tree = h('div', { class: 'calltree' }), say = h('p', { class: 'wsum' }), tbl = h('div', { class: 't-wrap' });
     const C = [1, 1]; for (let i = 2; i <= 6; i++) C[i] = 1 + C[i - 1] + C[i - 2];
@@ -2753,7 +2934,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 10. Электронные таблицы: ячейки A1:D4, формулы, копирование со сдвигом */
   function sheetWidget(box) {
     const COLS = 'ABCD', ROWS = 4, raw = {};
     const init = { A1: '4', B1: '3', C1: '=A1+B1*2', A2: '7', B2: '2', C2: '5', A3: '1', B3: '8', C3: '=СУММ(A1:B3)', D1: '=МАКС(A1:C2)' };
@@ -2828,7 +3008,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 11. Графы: число путей в ориентированном графе без циклов */
   function graphWidget(box) {
     const NODES = { 'А': [50, 100], 'Б': [170, 36], 'В': [170, 164], 'Г': [290, 36], 'Д': [290, 164], 'Е': [410, 100] };
     const EDGES = [['А', 'Б'], ['А', 'В'], ['Б', 'В'], ['Б', 'Г'], ['В', 'Г'], ['В', 'Д'], ['Г', 'Д'], ['Г', 'Е'], ['Д', 'Е']];
@@ -2863,7 +3042,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 12. Кодирование изображений и звука: калькулятор размера */
   function mediaWidget(box) {
     const w = num(1, 10000, 64), hh = num(1, 10000, 64), colors = h('select', { 'aria-label': 'Число цветов' });
     [2, 4, 16, 256, 65536, 16777216].forEach(c => colors.appendChild(h('option', { value: c, selected: c === 16 }, c)));
@@ -2887,11 +3065,9 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* ---------- модели для тем второй очереди ---------- */
   const txt = (label, val, w) => h('input', { type: 'text', value: val, spellcheck: 'false', autocomplete: 'off', 'aria-label': label, style: w ? 'width:' + w : null });
   const ones = s => s.split('').filter(c => c === '1').length;
 
-  /* 13. Выражения со степенями */
   function numexprWidget(box) {
     const a = num(0, 40, 5), b = num(0, 40, 3), c = num(0, 60, 2), sg = h('select', { 'aria-label': 'Знак' }, h('option', { value: '-' }, '−'), h('option', { value: '+' }, '+'));
     const out = h('p', { class: 'wsum' }), say = h('p', { class: 'wsum' });
@@ -2909,7 +3085,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 14. Кодирование текста */
   function textencWidget(box) {
     const cnt = num(1, 1000000, 8192), bits = h('select', { 'aria-label': 'Бит на символ' }, ...[8, 16, 32].map(x => h('option', { value: x }, x + ' бит'))), n = num(2, 1000, 26), len = num(1, 100, 10);
     const o1 = h('p', { class: 'wsum' }), o2 = h('p', { class: 'wsum' });
@@ -2926,7 +3101,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 15. Условие Фано */
   function fanoWidget(box) {
     const ins = ['0', '10', '110', '111'].map((v, i) => txt('Код буквы ' + 'АБВГ'[i], v, '90px'));
     const out = h('p', { class: 'wsum', 'aria-live': 'polite' }), tree = h('div', { class: 'wcards' });
@@ -2943,7 +3117,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 16. IP-адреса и маски */
   function ipWidget(box) {
     const ip = num(0, 255, 137), q = h('select', { 'aria-label': 'Число единиц в последнем байте маски' }, ...[0, 1, 2, 3, 4, 5, 6, 7, 8].map(x => h('option', { value: x, selected: x === 2 }, x)));
     const out = h('div', { class: 'bitrows' }), say = h('p', { class: 'wsum' });
@@ -2960,7 +3133,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 17. Алгоритм с двоичной записью */
   function autoWidget(box) {
     const inp = num(1, 100000, 13), tb = h('div', { class: 't-wrap' }), say = h('p', { class: 'wsum' });
     function draw() {
@@ -2978,7 +3150,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 18. Делимость */
   function divWidget(box) {
     const n = num(1, 100000, 36), A = num(1, 100000, 20), B = num(1, 100000, 100), m = num(1, 1000, 7);
     const o1 = h('p', { class: 'wsum' }), o2 = h('p', { class: 'wsum' });
@@ -2994,7 +3165,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 19. Таблицы истинности: порядок столбцов */
   function ttabWidget(box) {
     const E = [['x ∧ ¬y', (x, y, z) => x & (1 - y)], ['(x → y) ∨ z', (x, y, z) => ((1 - x) | y) | z], ['x ∨ (y ∧ z)', (x, y, z) => x | (y & z)]];
     const sel = h('select', { 'aria-label': 'Выражение' }, ...E.map((e, i) => h('option', { value: i }, e[0]))), ord = h('select', { 'aria-label': 'Порядок столбцов' }, ...['xyz', 'yxz', 'zyx', 'xzy'].map(x => h('option', { value: x }, x)));
@@ -3012,7 +3182,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 20. Логические уравнения */
   function leqWidget(box) {
     const n = h('select', { 'aria-label': 'Число переменных' }, ...[3, 4, 5].map(x => h('option', { value: x, selected: x === 4 }, x))), kind = h('select', { 'aria-label': 'Связка' }, h('option', { value: '→' }, 'цепочка импликаций'), h('option', { value: '∨' }, 'цепочка дизъюнкций'), h('option', { value: '≡' }, 'цепочка равносильностей'));
     const out = h('p', { class: 'wsum' }), list = h('div', { class: 'words' });
@@ -3030,7 +3199,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 21. Теория игр */
   function gamesWidget(box) {
     const a = num(1, 5, 1), b = h('select', { 'aria-label': 'Умножение' }, h('option', { value: 2 }, '×2'), h('option', { value: 3 }, '×3')), T = num(8, 40, 20);
     const out = h('div', { class: 'cells g-cells' }), say = h('p', { class: 'wsum' });
@@ -3046,7 +3214,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 22. Базы данных */
   const DB = [['Молоко', 'Молочные', 120, 14], ['Сыр', 'Молочные', 110, 5], ['Хлеб', 'Выпечка', 80, 20], ['Кефир', 'Молочные', 90, 12], ['Масло', 'Молочные', 100, 16], ['Булка', 'Выпечка', 60, 9], ['Батон', 'Выпечка', 70, 6]];
   function dbWidget(box) {
     const dep = h('select', { 'aria-label': 'Отдел' }, h('option', { value: '' }, 'любой'), h('option', { value: 'Молочные' }, 'Молочные'), h('option', { value: 'Выпечка' }, 'Выпечка')), pr = num(0, 500, 85);
@@ -3062,7 +3229,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 23. Строки */
   function textWidget(box) {
     const s = txt('Строка', 'AABBBACAB', '260px'), p = txt('Подстрока', 'AB', '90px');
     const view = h('div', { class: 'words' }), say = h('p', { class: 'wsum' });
@@ -3079,7 +3245,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 24. Исполнитель «Редактор» */
   function editorWidget(box) {
     const s = txt('Строка', '1111111', '200px'), f = txt('Найти', '111', '70px'), t = txt('Заменить на', '2', '70px');
     const out = h('div', { class: 'words' }), say = h('p', { class: 'wsum' });
@@ -3095,7 +3260,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 25. Черепаха: фигура и формула Пика */
   function turtleWidget(box) {
     const H = num(4, 12, 8), W = num(4, 12, 9), H1 = num(1, 10, 3), W1 = num(1, 10, 5);
     const NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg'); svg.setAttribute('class', 'gsvg'); svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', 'Фигура Черепахи');
@@ -3115,7 +3279,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 26. Последовательности */
   function seqWidget(box) {
     const a = txt('Числа через запятую', '3, 5, 7, 9, 12, 14', '280px'), m = num(2, 20, 4);
     const out = h('p', { class: 'wsum' });
@@ -3131,7 +3294,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 27. Жадные алгоритмы */
   function greedyWidget(box) {
     const f = txt('Размеры файлов', '4, 9, 6, 12, 3', '240px'), S = num(1, 500, 20);
     const out = h('div', { class: 'words' }), say = h('p', { class: 'wsum' });
@@ -3147,7 +3309,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 28. Количество программ */
   function progWidget(box) {
     const a = num(1, 5, 1), b = h('select', { 'aria-label': 'Умножение' }, h('option', { value: 2 }, '×2'), h('option', { value: 3 }, '×3')), s0 = num(1, 20, 1), T = num(2, 30, 12);
     const out = h('div', { class: 'cells g-cells' }), say = h('p', { class: 'wsum' });
@@ -3162,7 +3323,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
-  /* 29. Путь по таблице */
   function gridWidget(box) {
     let g = [[3, 5, 2, 7], [4, 1, 6, 2], [5, 8, 1, 3], [2, 4, 7, 6]];
     const out = h('div', { class: 'ttwrap' }), say = h('p', { class: 'wsum' }), mode = h('select', { 'aria-label': 'Что искать' }, h('option', { value: 'max' }, 'наибольшая сумма'), h('option', { value: 'min' }, 'наименьшая сумма'));
@@ -3178,15 +3338,104 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     draw();
   }
 
+  function games2Widget(box) {
+    const a = num(1, 12, 5), T = num(20, 90, 50), out = h('div', { class: 'words' }), say = h('p', { class: 'wsum' });
+    function draw() {
+      const A0 = clampInt(a.value, 1, 12, 5), TT = clampInt(T.value, 20, 90, 50), done = (x, y) => x + y >= TT, mv = (x, y) => [[x + 1, y], [x, y + 1], [x * 2, y], [x, y * 2]], memo = {};
+      const W = (x, y, k) => { const key = x + ',' + y + ',' + k; if (key in memo) return memo[key]; let res = false; const ms = mv(x, y); for (const m of ms) if (done(m[0], m[1])) { res = true; break; }
+        if (!res && k > 1) for (const m of ms) { if (done(m[0], m[1])) continue; if (mv(m[0], m[1]).every(q => !done(q[0], q[1]) && W(q[0], q[1], k - 1))) { res = true; break; } } return memo[key] = res; };
+      const V = (x, y, k) => mv(x, y).every(m => !done(m[0], m[1]) && W(m[0], m[1], k));
+      out.textContent = ''; const A = [], B = [], C = [];
+      for (let S = 1; S <= TT - A0 - 1; S++) {
+        const p1 = W(A0, S, 1), p2 = !p1 && W(A0, S, 2), v1 = V(A0, S, 1), v2 = V(A0, S, 2);
+        if (p2) A.push(S); if (v2) B.push(S); if (v2 && !v1) C.push(S);
+        const cls = p1 ? 'word' : p2 ? 'word ok' : v1 ? 'word' : v2 ? 'word ok' : 'word';
+        out.appendChild(h('span', { class: cls, title: p1 ? 'Петя выигрывает первым ходом' : p2 ? 'Петя выигрывает вторым ходом' : v1 ? 'Ваня выигрывает первым ходом' : v2 ? 'Ваня выигрывает вторым ходом' : 'ничья по глубине 2' }, S + (p1 ? ' П1' : p2 ? ' П2' : v1 ? ' В1' : v2 ? ' В2' : ' ·')));
+      }
+      say.textContent = 'Петя выигрывает вторым ходом (первым не может): ' + (A.join(', ') || 'таких S нет') + '. Ваня выигрывает первым или вторым ходом: ' + (B.join(', ') || 'таких S нет') + '. Ваня выигрывает именно вторым: ' + (C.join(', ') || 'таких S нет') + '.';
+    }
+    a.addEventListener('input', draw); T.addEventListener('input', draw);
+    box.append(h('p', { class: 'whint' }, 'Ход: добавить 1 камень в любую кучу или удвоить кучу. Игра кончается, когда в кучах не меньше T камней. П1, П2 — Петя выигрывает первым или вторым ходом; В1, В2 — Ваня.'), h('div', { class: 'wrow' }, field('Камней в первой куче', a), field('Порог T', T)), out, say);
+    draw();
+  }
+
+  function parWidget(box) {
+    const d = txt('Время процессов 1–6 (мс)', '4, 3, 5, 2, 6, 3', '220px'), out = h('div', { class: 'ttwrap' }), say = h('p', { class: 'wsum' });
+    const deps = [[], [0], [0], [1, 2], [2], [3, 4]];
+    function draw() {
+      const dur = d.value.split(/[,\s;]+/).map(Number).filter(x => x > 0).slice(0, 6); while (dur.length < 6) dur.push(1);
+      const st = [], en = []; for (let i = 0; i < 6; i++) { st[i] = deps[i].reduce((m, j) => Math.max(m, en[j]), 0); en[i] = st[i] + dur[i]; }
+      const fin = Math.max.apply(null, en); let conc = 0; for (let t = 0; t < fin; t++) { const c = en.filter((e, i) => st[i] <= t && t < e).length; if (c > conc) conc = c; }
+      const tb = h('table', { class: 't tt' }, h('tr', {}, h('th', {}, 'ID'), h('th', {}, 'Время'), h('th', {}, 'Зависит от'), h('th', {}, 'Начало'), h('th', {}, 'Конец')));
+      dur.forEach((x, i) => tb.appendChild(h('tr', {}, h('td', {}, i + 1), h('td', {}, x), h('td', {}, deps[i].length ? deps[i].map(j => j + 1).join(';') : '0'), h('td', {}, st[i]), h('td', {}, en[i]))));
+      out.textContent = ''; out.appendChild(tb);
+      say.textContent = 'Все процессы завершатся к ' + fin + ' мс. Одновременно работает не больше ' + conc + ' процессов.';
+    }
+    d.addEventListener('input', draw);
+    box.append(h('p', { class: 'whint' }, 'Процесс начинается, когда закончатся все, от которых он зависит. Меняйте время и смотрите, как сдвигается итог.'), h('div', { class: 'wrow' }, field('Время процессов 1–6 (мс)', d)), out, say);
+    draw();
+  }
+
+  function str2Widget(box) {
+    const s = txt('Строка из букв A, B, C', 'ABBACBAABCBB', '260px'), k = num(0, 5, 1), out = h('div', { class: 'words' }), say = h('p', { class: 'wsum' });
+    function draw() {
+      const str = s.value.toUpperCase().replace(/[^ABC]/g, '').slice(0, 40), K = clampInt(k.value, 0, 5, 1), n = str.length; let bi = 0, bj = -1;
+      for (let i = 0; i < n; i++) for (let j = i; j < n; j++) { const w = str.slice(i, j + 1); if (w.split('B').length - 1 <= K && w.length > bj - bi + 1) { bi = i; bj = j; } }
+      out.textContent = ''; str.split('').forEach((c, i) => out.appendChild(h('span', { class: 'word' + (i >= bi && i <= bj ? ' ok' : '') }, c)));
+      say.textContent = n ? 'Самая длинная подстрока, где B не больше ' + K + ' раз: длина ' + (bj - bi + 1) + ' (отмечена зелёным).' : 'Введите строку.';
+    }
+    s.addEventListener('input', draw); k.addEventListener('input', draw);
+    box.append(h('p', { class: 'whint' }, 'Меняйте строку и допустимое число букв B: подсвечивается самая длинная подходящая подстрока.'), h('div', { class: 'wrow' }, field('Строка', s), field('Букв B не больше', k)), out, say);
+    draw();
+  }
+
+  function maskWidget(box) {
+    const m = txt('Маска (? — цифра, * — любая цепочка)', '1*96', '200px'), K = num(2, 40, 7), L = num(100, 100000, 100000, 100), out = h('div', { class: 'words' }), say = h('p', { class: 'wsum' });
+    function draw() {
+      const mask = m.value.replace(/[^0-9?*]/g, '').slice(0, 10), kk = clampInt(K.value, 2, 40, 7), lim = clampInt(L.value, 100, 100000, 100000);
+      const rx = new RegExp('^' + mask.replace(/\?/g, '\\d').replace(/\*/g, '\\d*') + '$'), hits = [];
+      if (mask) for (let v = kk; v <= lim; v += kk) if (rx.test(String(v))) hits.push(v);
+      out.textContent = ''; hits.slice(0, 18).forEach(v => out.appendChild(h('span', { class: 'word ok' }, v)));
+      say.textContent = mask ? 'Чисел до ' + lim + ' по маске ' + mask + ', кратных ' + kk + ': ' + hits.length + (hits.length ? '. Наибольшее — ' + hits[hits.length - 1] + '.' : '.') : 'Введите маску.';
+    }
+    [m, K, L].forEach(e => e.addEventListener('input', draw));
+    box.append(h('p', { class: 'whint' }, 'Модель перебирает числа, кратные K, и оставляет те, что подходят под маску. Показаны первые из них.'), h('div', { class: 'wrow' }, field('Маска', m), field('Делитель K', K), field('Не больше', L)), out, say);
+    draw();
+  }
+
+  function schedWidget(box) {
+    const t = txt('Заявки: начало-конец через запятую', '1-4, 3-5, 0-6, 5-7, 3-9, 5-9, 6-10, 8-11', '340px'), out = h('div', { class: 'words' }), say = h('p', { class: 'wsum' });
+    function draw() {
+      const iv = t.value.split(',').map(x => x.trim().split(/\s*-\s*/).map(Number)).filter(p => p.length === 2 && isFinite(p[0]) && isFinite(p[1]) && p[1] > p[0]).slice(0, 14).map(p => ({ s: p[0], f: p[1] }));
+      const o = iv.slice().sort((x, y) => x.f - y.f || x.s - y.s), pick = []; let end = -1e9; o.forEach(x => { if (x.s >= end) { pick.push(x); end = x.f; } });
+      let mx = 0; for (let tm = 0; tm <= 60; tm++) { const c = iv.filter(x => x.s <= tm && tm < x.f).length; if (c > mx) mx = c; }
+      out.textContent = ''; o.forEach(x => out.appendChild(h('span', { class: 'word' + (pick.indexOf(x) >= 0 ? ' ok' : '') }, x.s + '–' + x.f)));
+      say.textContent = iv.length ? 'Заявки по окончанию; зелёные выбраны жадно: ' + pick.length + ' шт. Одновременно идут не более ' + mx + ' заявок, значит нужно аудиторий: ' + mx + '.' : 'Введите заявки вида 1-4, 3-5.';
+    }
+    t.addEventListener('input', draw);
+    box.append(h('p', { class: 'whint' }, 'Конец заявки в расчёт не входит. Выбираем заявку, которая заканчивается раньше всех, потом следующую, что начинается не раньше конца предыдущей.'), h('div', { class: 'wrow' }, field('Заявки', t)), out, say);
+    draw();
+  }
+
+  function prefWidget(box) {
+    const a = txt('Числа через запятую', '4, 5, 11, 2, 1, 19, 20, 5', '280px'), k = num(2, 12, 3), out = h('div', { class: 'words' }), say = h('p', { class: 'wsum' });
+    function draw() {
+      const arr = a.value.split(/[,\s;]+/).map(Number).filter(x => isFinite(x) && x > 0).slice(0, 20), K = clampInt(k.value, 2, 12, 3);
+      const pre = [0]; arr.forEach(x => pre.push(pre[pre.length - 1] + x)); const rem = pre.map(x => x % K);
+      const cnt = {}; let c = 0; rem.forEach(r => { c += cnt[r] || 0; cnt[r] = (cnt[r] || 0) + 1; });
+      const first = {}; let best = 0; rem.forEach((r, i) => { if (!(r in first)) first[r] = i; else best = Math.max(best, i - first[r]); });
+      out.textContent = ''; rem.forEach((r, i) => out.appendChild(h('span', { class: 'word' }, 'P' + i + ' mod ' + K + ' = ' + r)));
+      say.textContent = 'Подотрезков с суммой, кратной ' + K + ': ' + c + '. Наибольшая длина такого подотрезка: ' + best + '. Это два равных остатка префиксных сумм.';
+    }
+    a.addEventListener('input', draw); k.addEventListener('input', draw);
+    box.append(h('p', { class: 'whint' }, 'Подотрезок имеет сумму, кратную K, если у двух префиксных сумм одинаковые остатки. Модель считает такие пары.'), h('div', { class: 'wrow' }, field('Последовательность', a), field('K', k)), out, say);
+    draw();
+  }
+
   root.Widgets = { num: numWidget, hex: hexWidget, bit: bitWidget, info: infoWidget, comb: combWidget, speed: speedWidget, logic: logicWidget, algo: algoWidget, rec: recWidget, sheet: sheetWidget, graph: graphWidget, media: mediaWidget,
-    numexpr: numexprWidget, textenc: textencWidget, fano: fanoWidget, ip: ipWidget, auto: autoWidget, div: divWidget, ttab: ttabWidget, leq: leqWidget, games: gamesWidget, db: dbWidget, text: textWidget, editor: editorWidget, turtle: turtleWidget, seq: seqWidget, greedy: greedyWidget, prog: progWidget, grid: gridWidget };
+    numexpr: numexprWidget, textenc: textencWidget, fano: fanoWidget, ip: ipWidget, auto: autoWidget, div: divWidget, ttab: ttabWidget, leq: leqWidget, games: gamesWidget, db: dbWidget, text: textWidget, editor: editorWidget, turtle: turtleWidget, seq: seqWidget, greedy: greedyWidget, prog: progWidget, grid: gridWidget, games2: games2Widget, par: parWidget, str2: str2Widget, mask: maskWidget, sched: schedWidget, pref: prefWidget };
 })(window);
 
-/* js/planner.js */
-/* Планировщик подготовки: превращает состояние знаний и расписание ученика в план по дням.
-   Модуль не обращается к странице, поэтому его можно проверять в node (tests/check.js).
-   Все числа здесь — упрощённые допущения, а не измеренные данные: время на урок берётся из учебника,
-   на одно задание закладывается 1,5 минуты. */
 (function (root) {
   'use strict';
   const TASK_MIN = 1.5, MOCK_MIN = 25, STUDY_ORDER = [1, 3, 5, 6, 2, 4, 0];   // порядок выбора учебных дней недели: пн, ср, пт, сб, вт, чт, вс
@@ -3199,7 +3448,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   const diffDays = (a, b) => Math.round((parse(b) - parse(a)) / 86400000);
   const addMonths = (s, n) => { const d = parse(s), day = d.getDate(); d.setDate(1); d.setMonth(d.getMonth() + n); const last = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate(); d.setDate(Math.min(day, last)); return fmtDate(d); };
 
-  /* глубина темы в графе зависимостей: сначала то, на чём всё держится */
   function depth(id, memo) {
     memo = memo || {};
     if (memo[id] != null) return memo[id];
@@ -3207,13 +3455,11 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     return (memo[id] = t.pre.length ? 1 + Math.max.apply(null, t.pre.map(p => depth(p, memo))) : 0);
   }
 
-  /* сколько заданий нужно теме: от 3 (почти освоена) до 16 (почти ничего не знает) */
   function tasksFor(m) {
     if (m >= Engine.P.master) return 0;
     return Math.max(3, Math.min(16, Math.round(4 + 12 * (Engine.P.master - m) / (Engine.P.master - Engine.P.init))));
   }
 
-  /* ориентировочная готовность: средняя оценка знаний с учётом веса тем */
   function readiness(S, mm) {
     let a = 0, b = 0;
     Engine.TOPICS.forEach(t => { a += t.w * (mm ? mm[t.id] : S.topics[t.id].m); b += t.w; });
@@ -3238,7 +3484,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     if (days.length >= 14) mock.push(days[Math.floor(days.length / 2)]);
     mock.forEach(d => { d.cap = Math.max(0, d.cap - MOCK_MIN); d.mock = true; });
 
-    /* блоки работы по темам */
     const order = Engine.TOPICS.slice().sort((a, b) => depth(a.id) - depth(b.id) || (b.w * (1 - S.topics[b.id].m)) - (a.w * (1 - S.topics[a.id].m)));
     const blocks = [];
     order.forEach(t => {
@@ -3251,7 +3496,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     blocks.concat(review).forEach(b => { need += b.type === 'lesson' ? b.min : b.tasks * TASK_MIN; });
     const cap = days.reduce((a, d) => a + d.cap, 0);
     if (need > cap) {
-      /* времени не хватает: сокращаем практику (но не меньше двух заданий на тему) */
+
       const lessonsMin = blocks.filter(b => b.type === 'lesson').reduce((a, b) => a + b.min, 0);
       const prac = need - lessonsMin, k = Math.max(0.2, Math.min(1, (cap - lessonsMin) / prac));
       out.scale = k; out.status = 'tight';
@@ -3260,7 +3505,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     }
     const queue = blocks.concat(review);
 
-    /* раскладываем блоки по дням */
     let di = 0; const dropped = {};
     const room = d => d.cap - d.used;
     function put(d, it) { d.items.push(it); d.used += it.type === 'lesson' ? it.min : it.tasks * TASK_MIN; }
@@ -3282,7 +3526,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     });
     const nd = Object.keys(dropped).length;
     if (nd) { out.status = 'tight'; out.warnings.push('В расписание не поместились темы: ' + nd + ' (' + Object.keys(dropped).slice(0, 4).map(id => Engine.BY_ID[id].name).join(', ') + (nd > 4 ? ' и другие' : '') + '). Добавьте занятий в неделю или выберите более позднюю дату.'); }
-    /* свободное время: повторяем самые слабые темы по кругу */
+
     const weak = Engine.TOPICS.slice().sort((a, b) => S.topics[a.id].m - S.topics[b.id].m);
     let wi = 0, guard = 0;
     for (let i = Math.min(di, days.length - 1); i < days.length; i++) {
@@ -3294,7 +3538,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     }
     mock.forEach(d => { d.cap += MOCK_MIN; d.items.push({ type: 'exam', min: MOCK_MIN }); d.used += MOCK_MIN; });
 
-    /* прогноз: каждое запланированное задание поднимает оценку, урок добавляет немного сверху */
     const fm = {};
     Engine.TOPICS.forEach(t => { fm[t.id] = S.topics[t.id].m; out.byTopic[t.id] = { tasks: 0, lesson: false, first: null }; });
     days.forEach(d => d.items.forEach(it => {
@@ -3318,8 +3561,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   if (typeof module !== 'undefined' && module.exports) module.exports = root.Planner;
 })(typeof window !== 'undefined' ? window : global);
 
-/* js/trainer.js */
-/* Тренажёр: выбор задания, проверка ответа, обновление модели ученика, объяснение выбора. */
 (function (root) {
   'use strict';
   const { pct, highlight } = Util;
@@ -3347,7 +3588,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     return { t, c };
   }
 
-  /* Урок ещё не открывали, тема новая и ученик не отказался: сначала предлагаем учебник. */
   function needsLesson(id) {
     const S = Store.state;
     return !focus && Store.lesson(id) === 0 && S.topics[id].n === 0 && !S.skip[id];
@@ -3497,9 +3737,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.Trainer = { init, focusTopic, refresh: renderStats };
 })(window);
 
-/* js/plan.js */
-/* Вкладка «План»: диагностика, настройка расписания и персональный план подготовки.
-   Расчёт плана — в planner.js; здесь только интерфейс и сохранение выбора ученика. */
 (function (root) {
   'use strict';
   const { h, pct } = Util;
@@ -3520,7 +3757,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   }
   const set = m => { mode = m; render(); };
 
-  /* ---------- вводная ---------- */
   function intro() {
     return h('div', { class: 'card pl-card' },
       h('h3', {}, 'Персональный план подготовки'),
@@ -3531,7 +3767,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
       h('p', { class: 'muted small' }, 'План пересчитывается сам: чем больше вы решаете, тем точнее оценка знаний и тем точнее распределяются часы.'));
   }
 
-  /* ---------- диагностика ---------- */
   function startDiag() {
     const r = Engine.mulberry32((Math.random() * 2147483647) | 0);
     dq = Engine.TOPICS.slice().sort((a, b) => Planner.depth(a.id) - Planner.depth(b.id)).map(t => Engine.makeTask(t.id, 2, r));
@@ -3586,7 +3821,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         start ? h('button', { class: 'btn ghost', type: 'button', onclick: () => Util.go('learn', start.id) }, 'Сразу открыть урок') : null));
   }
 
-  /* ---------- настройки ---------- */
   function settings() {
     const cur = state().plan || { exam: Planner.addMonths(Store.today(), 3), hours: 4, days: 4 };
     const date = h('input', { type: 'date', value: cur.exam, min: Planner.addDays(Store.today(), 1), 'aria-label': 'Дата экзамена' });
@@ -3611,7 +3845,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         state().plan ? h('button', { class: 'btn ghost', type: 'button', onclick: () => set('plan') }, 'Отмена') : null));
   }
 
-  /* ---------- план ---------- */
   function itemTitle(it) {
     const nm = it.topic ? Engine.BY_ID[it.topic].name : '';
     if (it.type === 'lesson') return 'Урок: ' + nm;
@@ -3663,7 +3896,7 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         h('button', { class: 'btn primary', type: 'button', onclick: () => set('settings') }, 'Изменить дату')));
       return box;
     }
-    /* шапка */
+
     const week = Math.floor(plan.daysLeft / 7);
     box.appendChild(h('div', { class: 'card pl-card pl-head' },
       h('div', { class: 'pl-kv' },
@@ -3679,7 +3912,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
         h('p', { class: 'muted small' }, 'Это оценка внутри модели приложения, а не прогноз баллов ЕГЭ. Она показывает, как изменится ваша оценка знаний при выполнении плана.')),
       plan.warnings.map(w => h('p', { class: 'pl-warn', role: 'status' }, w))));
 
-    /* сегодня */
     const snap = todaySnapshot(plan), prog = progressOf(snap), done = prog.filter(x => x >= 1).length;
     const today = h('div', { class: 'card pl-card' }, h('h3', {}, 'Сегодня, ' + dtxt(snap.date)));
     if (!snap.items.length) today.appendChild(h('p', {}, 'Сегодня по расписанию отдых. Можно позаниматься сверх плана в тренажёре, но обязательного ничего нет.'));
@@ -3696,7 +3928,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     }
     box.appendChild(today);
 
-    /* ближайшие дни */
     const next = plan.days.filter(d => d.date > Store.today()).slice(0, 7);
     if (next.length) {
       const ul = h('ul', { class: 'pl-days' });
@@ -3705,7 +3936,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
       box.appendChild(h('div', { class: 'card pl-card' }, h('h3', {}, 'Ближайшие занятия'), ul));
     }
 
-    /* дорожная карта */
     const road = h('ul', { class: 'pl-road' });
     Engine.TOPICS.slice().sort((a, b) => (plan.byTopic[a.id].first || 'z').localeCompare(plan.byTopic[b.id].first || 'z') || Planner.depth(a.id) - Planner.depth(b.id)).forEach(t => {
       const o = plan.byTopic[t.id], m = S.topics[t.id].m;
@@ -3738,10 +3968,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.Plan = { init, render: () => { if (mode === 'plan' || !mode) { mode = null; } render(); } };
 })(window);
 
-/* js/exam.js */
-/* Вкладка «Экзамен»: пробный вариант с таймером, отчёт по темам и рекомендации.
-   Варианты строятся тем же генератором заданий, что и в тренажёре, поэтому это тренировка формата,
-   а не копия настоящего экзамена. Уровни растут от начала варианта к концу, как и сложность заданий в КИМ. */
 (function (root) {
   'use strict';
   const { h, pct, esc } = Util;
@@ -3759,7 +3985,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   const levelName = p => p >= 85 ? 'высокий' : p >= 65 ? 'хороший' : p >= 40 ? 'средний' : 'начальный';
   const total = () => Engine.TOPICS.length;
 
-  /* ---------- построение варианта ---------- */
   function build(sz) {
     const S = Store.state, r = Engine.mulberry32((Math.random() * 2147483647) | 0);
     const byWeak = Engine.TOPICS.slice().sort((a, b) => S.topics[a.id].m - S.topics[b.id].m);
@@ -3777,7 +4002,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     return { size: sz, qs, ans: qs.map(() => ''), cur: 0, limit: Math.ceil(n * PER_Q * 60), start: Date.now(), timed };
   }
 
-  /* ---------- настройка ---------- */
   function setup() {
     const S = Store.state;
     const opts = h('div', { class: 'ex-sizes', role: 'radiogroup', 'aria-label': 'Размер варианта' });
@@ -3809,7 +4033,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     return box;
   }
 
-  /* ---------- прохождение ---------- */
   function start() { ex = build(size); view = 'run'; rep = null; clearInterval(tick); if (ex.timed) tick = setInterval(onTick, 1000); render(); }
 
   const left = () => ex.limit - (Date.now() - ex.start) / 1000;
@@ -3849,7 +4072,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     return card;
   }
 
-  /* ---------- завершение и отчёт ---------- */
   function finish(byTime) {
     clearInterval(tick); tick = 0;
     const S = Store.state, sec = Math.min(ex.limit * (ex.timed ? 1 : 3), Math.round((Date.now() - ex.start) / 1000));
@@ -3926,7 +4148,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
           h('button', { class: 'btn primary', type: 'button', onclick: () => { view = 'setup'; rep = null; render(); } }, 'Новый вариант'))));
   }
 
-  /* ---------- файл отчёта ---------- */
   function reportHtml(r, who) {
     const p = Math.round(r.ok / r.n * 100), d = r.at;
     const rows = Engine.TOPICS.filter(t => r.by[t.id]).map(t => '<tr><td>' + esc(t.name) + '</td><td>' + r.by[t.id][0] + ' из ' + r.by[t.id][1] + '</td><td>' + pct(r.before[t.id]) + '% → ' + pct(r.after[t.id]) + '%</td></tr>').join('');
@@ -3960,9 +4181,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.Exam = { init: render, render };
 })(window);
 
-/* js/learn.js */
-/* Вкладка «Учебник»: маршрут из двенадцати уроков и страница выбранного урока.
-   Порядок такой: прочитать, попробовать на модели, проверить себя, перейти к заданиям. */
 (function (root) {
   'use strict';
   const { h, pct } = Util;
@@ -3972,7 +4190,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   const ORDER = Engine.TOPICS.map(t => t.id);
   let current = ORDER[0];
 
-  /* ---------- маршрут слева ---------- */
   function firstOpen() { return ORDER.find(id => Store.lesson(id) < 2) || null; }
 
   function renderRoute() {
@@ -3990,7 +4207,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     });
   }
 
-  /* ---------- контрольное задание в конце урока ---------- */
   function checkBlock(id) {
     const box = h('div', { class: 'lcheck' });
     let task = null;
@@ -4023,7 +4239,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     return box;
   }
 
-  /* ---------- страница урока ---------- */
   function section(n, title, ...content) {
     return h('section', { class: 'ls' }, h('h3', { class: 'ls-h' }, h('span', { class: 'ls-n' }, n), title), ...content);
   }
@@ -4090,8 +4305,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.Learn = { init, open };
 })(window);
 
-/* js/map.js */
-/* Вкладка «Карта знаний»: граф тем, сведения о выбранной теме и рекомендация. */
 (function (root) {
   'use strict';
   const $ = id => document.getElementById(id);
@@ -4164,8 +4377,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.Kmap = { init, render };
 })(window);
 
-/* js/lab.js */
-/* Вкладка «Эксперимент»: гонка режимов на одном ученике и сравнение на сотнях виртуальных учеников. */
 (function (root) {
   'use strict';
   const $ = id => document.getElementById(id);
@@ -4178,7 +4389,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   const STEPS = Engine.DEFAULT_STEPS, NT = Engine.TOPICS.length, REACH = Engine.REACH;
   let seed = 13, traces = null, step = 0, timer = 0, lanes = {};
 
-  /* ---------- гонка ---------- */
   function buildLanes() {
     const box = $('raceLanes'); box.textContent = ''; lanes = {};
     MODES.forEach(m => {
@@ -4246,7 +4456,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     timer = setInterval(() => { step++; render(true); if (step >= STEPS) stop(); }, ms);
   }
 
-  /* ---------- массовый запуск ---------- */
   function readParams() {
     const clamp = (v, a, b, d) => { v = Math.round(Number(v)); return isFinite(v) ? Math.max(a, Math.min(b, v)) : d; };
     const p = { N: clamp($('pN').value, 20, 3000, 500), S: clamp($('pS').value, 10, 300, STEPS), seed: clamp($('pSeed').value, -999999, 999999, 2026) };
@@ -4349,14 +4558,11 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   root.Lab = { init, runMass, runFive };
 })(window);
 
-/* js/main.js */
-/* Запуск страницы: тема оформления, вкладки, переходы между модулями, демонстрация на главной. */
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
   const reduce = Util.reducedMotion();
 
-  /* ---------- тема оформления ---------- */
   const SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
   const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>';
   const currentTheme = () => document.documentElement.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -4371,7 +4577,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   });
   drawThemeButton();
 
-  /* ---------- вкладки приложения ---------- */
   const TABS = ['learn', 'plan', 'train', 'exam', 'map', 'lab'];
   function showTab(name) {
     TABS.forEach(t => {
@@ -4393,7 +4598,6 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   });
   document.querySelectorAll('[data-tab]').forEach(a => a.addEventListener('click', () => showTab(a.dataset.tab)));
 
-  /* переходы между модулями идут через события: Util.go('learn' | 'train', идентификатор темы) */
   const toApp = () => $('tabbtn-' + TABS.find(t => !$('tab-' + t).hidden)).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
   document.addEventListener('ih:learn', e => { Learn.open(e.detail); showTab('learn'); toApp(); });
   document.addEventListener('ih:exam', () => { showTab('exam'); toApp(); });
@@ -4407,14 +4611,12 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
   Lab.init();
   showTab('learn');
 
-  /* ---------- «Под капотом» ---------- */
   Engine.TOPICS.forEach(t => {
     const li = document.createElement('li'); li.className = 'chip';
     li.textContent = t.name + ' · вес ' + String(t.w).replace('.', ',');
     $('hoodTopics').appendChild(li);
   });
 
-  /* ---------- демонстрация на главной: система обучает виртуального ученика ---------- */
   const HERO_SEEDS = [13, 20, 53, 89], HERO_STEPS = 90;
   const heroGraph = Graph.create($('heroGraph'), { interactive: false, compact: true });
   let seedIdx = 0, trace = null, step = 0, timer = 0;
@@ -4445,15 +4647,13 @@ table.tt tr.T td { background: rgba(var(--acc-rgb), .12); }
     }
   }
 
-  /* ---------- подсветка шагов «как это работает» ---------- */
   const steps = document.querySelectorAll('#steps .step');
   let lit = 0;
   function nextStep() { steps.forEach((s, i) => s.classList.toggle('on', i === lit)); lit = (lit + 1) % steps.length; }
   nextStep();
   if (!reduce) setInterval(nextStep, 2400);
 
-  /* ---------- фон главной ---------- */
-  try { FX.network($('heroBg')); } catch (e) { /* фон — украшение, без него всё работает */ }
+  try { FX.network($('heroBg')); } catch (e) {  }
 })();
 
 </script>
